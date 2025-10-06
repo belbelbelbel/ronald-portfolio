@@ -32,19 +32,13 @@ export function AboutSection() {
             transition={{ delay: 0.3 }}
           >
             <p>
-              My journey into software development began with a curiosity about how apps work and a desire to create
-              meaningful digital experiences. Over the years, I've honed my skills in frontend and mobile development,
-              specializing in React and React Native ecosystems.
+              My journey into software development started with a simple curiosity, I wanted to understand how the apps I loved actually worked. That curiosity quickly grew into a passion for creating digital experiences that feel seamless, useful, and genuinely enjoyable to use.
             </p>
             <p>
-              I'm passionate about building intuitive, performant applications that solve real-world problems. Whether
-              it's crafting pixel-perfect user interfaces or architecting scalable mobile solutions, I bring attention
-              to detail and a user-first mindset to every project.
+              Over time, I’ve focused on frontend and mobile development, working mainly with React, Next and React Native to build interfaces that are fast, intuitive, and visually polished.
             </p>
             <p>
-              With expertise in Firebase and Node.js, I bridge the gap between frontend and backend, creating full-stack
-              solutions that are both beautiful and functional. I thrive in collaborative environments and love turning
-              complex challenges into elegant, accessible experiences.
+              I enjoy bringing ideas to life, from designing smooth, user-friendly interfaces to building scalable solutions that perform in the real world. With hands-on experience in Firebase and mid knowledge of Node.js, I’m able to bridge the frontend and backend to deliver complete, well-structured applications.
             </p>
           </motion.div>
         </motion.div>
