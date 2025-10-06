@@ -30,7 +30,7 @@ export function Navigation() {
         scrolled ? "glass-strong shadow-lg" : ""
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 xl:max-w-6xl xl:px-0 py-4">
         <div className="flex items-center justify-between">
           <motion.a href="#home" className="text-xl font-bold text-foreground" whileHover={{ scale: 1.05 }}>
             RB

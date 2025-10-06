@@ -17,7 +17,7 @@ export function WebProjectsSection() {
   return (
     <>
       <section id="projects" className="py-24 px-6" ref={ref}>
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-16 text-center text-balance"
             initial={{ opacity: 0, y: 20 }}

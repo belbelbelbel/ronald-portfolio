@@ -20,7 +20,7 @@ export function HeroSection() {
 
   return (
     <section id="home" className="min-h-screen flex items-center  justify-center pt-20 px-0">
-      <div className="container max-w-4xl xl:max-w-5xl mx-auto">
+      <div className="container max-w-4xl xl:max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <motion.div

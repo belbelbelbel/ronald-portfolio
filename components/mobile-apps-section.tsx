@@ -18,7 +18,7 @@ export function MobileAppsSection() {
   return (
     <>
       <section id="mobile-apps" className="py-24 px-6 bg-muted/30" ref={ref}>
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-16 text-center text-balance"
             initial={{ opacity: 0, y: 20 }}

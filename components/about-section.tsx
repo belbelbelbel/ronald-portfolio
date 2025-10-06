@@ -10,7 +10,7 @@ export function AboutSection() {
 
   return (
     <section id="about" className="py-24 px-6" ref={ref}>
-      <div className="container mx-auto xl:max-w-5xl shadow max-w-4xl">
+      <div className="container mx-auto xl:max-w-6xl shadow max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

@@ -173,7 +173,7 @@ export function ContactSection() {
           transition={{ delay: 0.6 }}
           className="mt-16 text-center text-muted-foreground"
         >
-          <p>© Forever, Ronald chiagozie Belonwu.</p>
+          <p>A.K.A - BENDEE</p>
         </motion.div>
       </div>
     </section>
