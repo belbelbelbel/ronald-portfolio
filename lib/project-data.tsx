@@ -60,7 +60,7 @@ export const webProjects: WebProject[] = [
     description:
       "A lightweight leave management tool designed for growing teams: quick setup, clear approval flows, notification and simple reporting so  managers spend less time on admin and more on building",
     image: "/leaveimg2.png",
-    tech: ["Pure Javascript", "Tailwind", "Firebase"],
+    tech: ["Pure Javascript", "Tailwind",'Express'],
     liveUrl: "https://leave-mangment-system.vercel.app//",
     githubUrl: "https://github.com/belbelbelbel/leave-mangment-system",
     screens: [
@@ -90,8 +90,8 @@ export const webProjects: WebProject[] = [
       "NOVABOARD is a concept dashboard showcasing real-time analytics, data integration, and secure cloud storage,  designed to demonstrate clean UI and powerful data visualization.",
     image: "/novaimg2.png",
     tech: ["Next.js", "Tailwind.css", "Chart.js"],
-    liveUrl: "https://monobudget.example.com",
-    githubUrl: "https://github.com/ronaldbelonwu/monobudget",
+    liveUrl: "https://novaboard-nine.vercel.app/",
+    githubUrl: "https://github.com/belbelbelbel/novaboard",
     screens: [
       {
         url: "/novaimg1.png",
