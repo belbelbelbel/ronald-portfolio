@@ -118,7 +118,7 @@ export const mobileApps: MobileApp[] = [
     type: "mobile",
     title: "WalletWise",
     description:
-      "A React Native app for tracking shared expenses with friends and family, featuring real-time sync and split calculations.",
+      "A smart expense tracker and collaborative savings app that empowers users to manage spending, set financial goals, and save together combining simplicity, and automation",
     image: "/expense-tracker-mobile-app.jpg",
     tech: ["React Native", "Firebase", "Expo"],
     githubUrl: "https://github.com/ronaldbelonwu/expense-tracker",
@@ -129,9 +129,9 @@ export const mobileApps: MobileApp[] = [
   },
   {
     type: "mobile",
-    title: "Lazio",
+    title: "SHOPNEST",
     description:
-      "A social networking app with Firebase authentication and real-time messaging, built with Expo for cross-platform deployment.",
+      "A modern mobile e-commerce app that delivers a seamless shopping experience with secure payments, personalized recommendations, and smooth seller–buyer interactions.",
     image: "/social-media-mobile-app.jpg",
     tech: ["React Native", "Firebase Auth", "Expo"],
     githubUrl: "https://github.com/ronaldbelonwu/lazio",
@@ -142,9 +142,9 @@ export const mobileApps: MobileApp[] = [
   },
   {
     type: "mobile",
-    title: "QuickWash",
+    title: "NEWSBEAT",
     description:
-      "A service booking application for laundry services with scheduling, payment integration, and order tracking.",
+      "A sleek and engaging news app that brings real-time updates, trending headlines, and personalized feeds keeping users informed with speed and clarity",
     image: "/service-booking-mobile-app.jpg",
     tech: ["React Native", "Node.js", "Stripe"],
     githubUrl: "https://github.com/ronaldbelonwu/quickwash",
