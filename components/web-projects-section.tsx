@@ -34,15 +34,15 @@ export function WebProjectsSection() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10, rotateY: 2 }}
-                className="glass-strong rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all"
+                className="glass-strong rounded-2xl overflow-hidden shadow hover:shadow transition-all"
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-52 overflow-hidden">
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-300 hover:scale-110"
+                    className="object-contain transition-transform duration-300 hover:scale-103"
                   />
                 </div>
                 <div className="p-6 space-y-4">

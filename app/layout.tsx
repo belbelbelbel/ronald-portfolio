@@ -5,10 +5,10 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
-}
+  title: "Ronald Belonwu — Fullstack & Mobile Engineer",
+  description:
+    "Personal portfolio of Ronald Belonwu — a Fullstack and mobile engineer skilled in React,Next, React Native, Firebase, and Node.js. Explore modern web and mobile projects with smooth UI and appealing architecture.",
+};
 
 export default function RootLayout({
   children,

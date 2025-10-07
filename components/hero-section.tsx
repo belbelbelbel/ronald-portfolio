@@ -64,7 +64,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              I build modern web and mobile experiences using React.js,Next.js, React Native, <div>and Firebase.</div>
+              I build modern web and mobile experiences using React.js,Next.js, React Native, and Firebase.
             </motion.p>
 
             <motion.div

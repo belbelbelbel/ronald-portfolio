@@ -52,7 +52,7 @@ export function MobileAppsSection() {
                   </div>
                   {/* Floating icon */}
                   <motion.div
-                    className="absolute -top-4 -right-4 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-lg"
+                    className="absolute -top-4 -right-4 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow"
                     animate={{
                       y: [0, -10, 0],
                     }}
@@ -67,7 +67,7 @@ export function MobileAppsSection() {
                 </motion.div>
 
                 {/* App details */}
-                <div className="glass-strong rounded-2xl p-6 w-full shadow-lg space-y-4">
+                <div className="glass-strong rounded-2xl p-6 w-full shadow space-y-4">
                   <h3 className="text-2xl font-bold text-foreground text-center">{app.title}</h3>
                   <p className="text-muted-foreground leading-relaxed text-center">{app.description}</p>
                   <div className="flex flex-wrap gap-2 justify-center">

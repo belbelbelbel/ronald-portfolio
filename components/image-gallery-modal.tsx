@@ -138,7 +138,7 @@ export function ImageGalleryModal({ isOpen, onClose, images, projectTitle }: Ima
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`relative w-20 h-12 rounded-lg overflow-hidden flex-shrink-0 transition-all ${
+                    className={`relative w-20 h-16 rounded-lg overflow-hidden flex-shrink-0 transition-all ${
                       index === currentIndex ? "ring-2 ring-primary scale-110" : "opacity-50 hover:opacity-100"
                     }`}
                   >

@@ -28,84 +28,85 @@ export interface MobileApp {
 export const webProjects: WebProject[] = [
   {
     type: "web",
-    title: "ConnectVision",
+    title: "Gote-Marketplace",
     description:
-      "A modern video conferencing platform built with Next.js and Tailwind CSS, featuring real-time communication and screen sharing.",
-    image: "/video-conferencing-app-interface.jpg",
-    tech: ["Next.js", "Tailwind", "WebRTC"],
-    liveUrl: "https://connectvision.example.com",
-    githubUrl: "https://github.com/ronaldbelonwu/connectvision",
-    screens: [
-      {
-        url: "/video-conferencing-dashboard.jpg",
-        caption: "Dashboard View",
-      },
-      {
-        url: "/video-call-interface.png",
-        caption: "Video Call Interface",
-      },
-      {
-        url: "/screen-sharing-view.jpg",
-        caption: "Screen Sharing",
-      },
-      {
-        url: "/settings-panel.png",
-        caption: "Settings Panel",
-      },
-    ],
-  },
-  {
-    type: "web",
-    title: "NaijaShine",
-    description:
-      "A vibrant e-commerce platform showcasing Nigerian products with seamless shopping experience and payment integration.",
-    image: "/ecommerce-website-interface.png",
-    tech: ["React", "Firebase", "Stripe"],
+      "A vibrant e-commerce platform showcasing products with a seamless shopping experience, secure payment integration, and opportunities for sellers to easily sign up and grow their business.",
+    image: "/goteimg3.png",
+    tech: ["Next.js", "Firebase", "Tailwind"],
     liveUrl: "https://naijashine.example.com",
     githubUrl: "https://github.com/ronaldbelonwu/naijashine",
     screens: [
       {
-        url: "/ecommerce-homepage.png",
+        url: "/goteimg1.png",
         caption: "Homepage",
       },
       {
-        url: "/product-catalog-grid.jpg",
+        url: "/goteimg5.png",
         caption: "Product Catalog",
       },
       {
-        url: "/shopping-cart-checkout.jpg",
+        url: "/goteimg2.png",
         caption: "Shopping Cart",
       },
       {
-        url: "/order-confirmation-page.png",
+        url: "/goteimg6.png",
         caption: "Order Confirmation",
       },
     ],
   },
   {
     type: "web",
-    title: "Monobudget Clone",
+    title: "LeaveWise-App",
     description:
-      "An expense tracking application with intuitive UI for managing personal finances and visualizing spending patterns.",
-    image: "/expense-tracker-dashboard.jpg",
-    tech: ["React", "Node.js", "Chart.js"],
+      "A lightweight leave management tool designed for growing teams: quick setup, clear approval flows, notification and simple reporting so  managers spend less time on admin and more on building",
+    image: "/leaveimg2.png",
+    tech: ["Pure Javascript", "Tailwind", "Firebase"],
+    liveUrl: "https://leave-mangment-system.vercel.app//",
+    githubUrl: "https://github.com/belbelbelbel/leave-mangment-system",
+    screens: [
+      {
+        url: "/leaveimg1.png",
+        caption: "Landing Page",
+      },
+      {
+        url: "/leaveimg2.png",
+        caption: "Admin Panel",
+      },
+      {
+        url: "/leaveimg3.png",
+        caption: "Employee Dashboard",
+      },
+      {
+        url: "/leaveimg4.png",
+        caption: "Quick leave form",
+      },
+    ],
+  },
+  
+  {
+    type: "web",
+    title: "NOVABOARD",
+    description:
+      "NOVABOARD is a concept dashboard showcasing real-time analytics, data integration, and secure cloud storage,  designed to demonstrate clean UI and powerful data visualization.",
+    image: "/novaimg2.png",
+    tech: ["Next.js", "Tailwind.css", "Chart.js"],
     liveUrl: "https://monobudget.example.com",
     githubUrl: "https://github.com/ronaldbelonwu/monobudget",
     screens: [
       {
-        url: "/expense-tracker-dashboard-with-charts.jpg",
+        url: "/novaimg1.png",
         caption: "Dashboard Overview",
       },
       {
-        url: "/transaction-list-view.jpg",
+        url: "/novaimg2.png",
         caption: "Transactions",
       },
       {
-        url: "/budget-categories-view.jpg",
+        url: "/novaimg3.png",
         caption: "Budget Categories",
       },
       {
-        url: "/financial-reports-analytics.jpg",
+        url: "/novaimg4.png",
         caption: "Reports & Analytics",
       },
     ],
@@ -115,7 +116,7 @@ export const webProjects: WebProject[] = [
 export const mobileApps: MobileApp[] = [
   {
     type: "mobile",
-    title: "Collaborative Expense Tracker",
+    title: "WalletWise",
     description:
       "A React Native app for tracking shared expenses with friends and family, featuring real-time sync and split calculations.",
     image: "/expense-tracker-mobile-app.jpg",
