@@ -42,6 +42,7 @@ export function WebProjectsSection() {
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     fill
+                    priority={true}
                     className="object-contain transition-transform duration-300 hover:scale-103"
                   />
                 </div>

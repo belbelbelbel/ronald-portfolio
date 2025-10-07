@@ -100,6 +100,7 @@ export function ImageGalleryModal({ isOpen, onClose, images, projectTitle }: Ima
                       src={images[currentIndex].url || "/placeholder.svg"}
                       alt={images[currentIndex].caption}
                       fill
+                      priority={true}
                       className="object-contain"
                     />
                   </motion.div>
