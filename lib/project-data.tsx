@@ -114,27 +114,29 @@ export const webProjects: WebProject[] = [
 ]
 
 export const mobileApps: MobileApp[] = [
-  {
-    type: "mobile",
-    title: "WalletWise",
-    description:
-      "A smart expense tracker and collaborative savings app that empowers users to manage spending, set financial goals, and save together combining simplicity, and automation",
-    image: "/expense-tracker-mobile-app.jpg",
-    tech: ["React Native", "Firebase", "Expo"],
-    githubUrl: "https://github.com/ronaldbelonwu/expense-tracker",
-    demoVideo: {
-      type: "youtube",
-      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-  },
+ 
   {
     type: "mobile",
     title: "SHOPNEST",
     description:
       "A modern mobile e-commerce app that delivers a seamless shopping experience with secure payments, personalized recommendations, and smooth seller–buyer interactions.",
-    image: "/social-media-mobile-app.jpg",
+    // image: "/social-media-mobile-app.jpg",
+    image: "/shopimg.png",
     tech: ["React Native", "Firebase Auth", "Expo"],
     githubUrl: "https://github.com/ronaldbelonwu/lazio",
+    demoVideo: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    },
+  },
+   {
+    type: "mobile",
+    title: "WalletWise",
+    description:
+      "A smart expense tracker and collaborative savings app that empowers users to manage spending, set financial goals, and save together combining simplicity, and automation",
+    image: "/social-media-mobile-app.jpg",
+    tech: ["React Native", "Firebase", "Expo"],
+    githubUrl: "https://github.com/ronaldbelonwu/expense-tracker",
     demoVideo: {
       type: "youtube",
       url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -145,7 +147,7 @@ export const mobileApps: MobileApp[] = [
     title: "NEWSBEAT",
     description:
       "A sleek and engaging news app that brings real-time updates, trending headlines, and personalized feeds keeping users informed with speed and clarity",
-    image: "/service-booking-mobile-app.jpg",
+    image: "/newsimg.png",
     tech: ["React Native", "Node.js", "Stripe"],
     githubUrl: "https://github.com/ronaldbelonwu/quickwash",
     demoVideo: {

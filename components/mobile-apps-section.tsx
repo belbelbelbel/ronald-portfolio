@@ -43,9 +43,9 @@ export function MobileAppsSection() {
                   transition={{ type: "spring", stiffness: 300 }}
                   style={{ transformStyle: "preserve-3d" }}
                 >
-                  <div className="relative w-64 h-[500px] glass-strong rounded-[3rem] p-3 shadow-2xl">
+                  <div className="relative w-72 h-[500px] glass-strong rounded-[1rem] p-3 shadow-2xl">
                     <div className="w-full h-full rounded-[2.5rem] overflow-hidden bg-background">
-                      <Image src={app.image || "/placeholder.svg"} alt={app.title} fill className="object-cover" />
+                      <Image src={app.image || "/placeholder.svg"} alt={app.title} fill priority={true} className="object-cover" />
                     </div>
                     {/* Phone notch */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-background rounded-b-2xl" />
