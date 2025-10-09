@@ -126,7 +126,7 @@ export function ContactSection() {
                     icon: Github,
                     label: "GitHub",
                     value: "@belbelbelbel",
-                    href: "https://github.com/belbelbel",
+                    href: "https://github.com/belbelbelbel",
                   },
                   {
                     icon: Linkedin,
@@ -166,15 +166,19 @@ export function ContactSection() {
           </motion.div>
         </div>
 
-        {/* Footer */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.6 }}
-          className="mt-16 text-center text-muted-foreground"
-        >
-          <p>A.K.A - BENDEE</p>
-        </motion.div>
+      <motion.div
+                  className="mt-auto mb-8 text-center pt-20 flex gap-4 justify-center items-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
+                >
+                  <p className="text-sm text-muted-foreground">
+                    © 2024 Ronald Belonwu
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Fullstack & Mobile Engineer
+                  </p>
+                </motion.div>
       </div>
     </section>
   )
