@@ -30,11 +30,11 @@ export const webProjects: WebProject[] = [
     type: "web",
     title: "Gote-Marketplace",
     description:
-      "A vibrant e-commerce platform showcasing products with a seamless shopping experience, secure payment integration, and opportunities for sellers to easily sign up and grow their business.",
+      "An e-commerce platform showcasing products with a seamless shopping experience, secure payment integration, and opportunities for sellers to easily sign up and grow their business.",
     image: "/goteimg3.png",
     tech: ["Next.js", "Firebase", "Tailwind"],
-    liveUrl: "https://naijashine.example.com",
-    githubUrl: "https://github.com/ronaldbelonwu/naijashine",
+    liveUrl: "https://gote-marketplace.vercel.app/",
+    githubUrl: "https://github.com/belbelbelbel/gote-marketplace",
     screens: [
       {
         url: "/goteimg1.png",

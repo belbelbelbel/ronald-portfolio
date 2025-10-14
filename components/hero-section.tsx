@@ -7,10 +7,9 @@ import Image from "next/image"
 
 export function HeroSection() {
   const handleDownloadCV = () => {
-    // Trigger CV download
     const link = document.createElement("a")
-    link.href = "/ronald-belonwu-cv.pdf"
-    link.download = "Ronald-Belonwu-CV.pdf"
+    link.href = "/Ronald-Chiagozie-FlowCV-Resume-20251014.pdf"
+    link.download = "/Ronald-Chiagozie-FlowCV-Resume-20251014.pdf"
     link.click()
   }
 

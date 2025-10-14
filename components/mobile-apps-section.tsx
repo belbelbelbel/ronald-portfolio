@@ -82,7 +82,7 @@ export function MobileAppsSection() {
                     Watch Demo
                   </Button>
                   <Button
-                    className="w-full gap-2 bg-transparent"
+                    className="w-full gap-2 bg-foreground text-background hover:bg-foreground/90 cursor-pointer"
                     variant="outline"
                     onClick={() => window.open(app.githubUrl, "_blank")}
                   >
