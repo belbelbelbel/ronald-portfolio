@@ -10,14 +10,14 @@ import { Navigation } from "@/components/navigation"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-x-hidden">
       <Navigation />
       <HeroSection />
       <AboutSection />
       <SkillsSection />
-      <WebProjectsSection/>
-      <MobileAppsSection/>
-      <ContactSection/>
+      <WebProjectsSection />
+      <MobileAppsSection /> 
+      <ContactSection />
     </main>
   )
 }

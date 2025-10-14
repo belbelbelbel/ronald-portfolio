@@ -179,7 +179,7 @@ export function Navigation() {
             
             {/* Mobile Menu Panel */}
             <motion.div
-              className="fixed top-0 right-0 h-full w-80 max-w-[85vw] glass-strong backdrop-blur z-50 shadow-2xl"
+              className="fixed top-0 right-0 h-full w-80 max-w-[90vw] glass-strong backdrop-blur z-50 shadow-2xl"
               variants={mobileMenuVariants}
               initial="closed"
               animate="open"

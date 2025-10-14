@@ -43,7 +43,7 @@ export function MobileAppsSection() {
                   transition={{ type: "spring", stiffness: 300 }}
                   style={{ transformStyle: "preserve-3d" }}
                 >
-                  <div className="relative w-72 h-[500px] glass-strong rounded-[1rem] p-3 shadow-2xl">
+                  <div className="relative w-64 sm:w-72 h-[440px] sm:h-[500px] glass-strong rounded-[1rem] p-3 shadow-2xl">
                     <div className="w-full h-full rounded-[2.5rem] overflow-hidden bg-background">
                       <Image src={app.image || "/placeholder.svg"} alt={app.title} fill priority={true} className="object-cover" />
                     </div>

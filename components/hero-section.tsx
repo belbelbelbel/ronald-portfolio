@@ -18,9 +18,9 @@ export function HeroSection() {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center  justify-center pt-20 px-0">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6">
       <div className="container max-w-4xl xl:max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2  gap-12 flex justify-center items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -29,7 +29,7 @@ export function HeroSection() {
             className="space-y-6 text-center md:text-left"
           >
             <motion.h1
-              className="text-5xl md:text-6xl font-bold text-balance"
+              className="text-5xl md:text-6xl  font-bold text-balance"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -92,7 +92,7 @@ export function HeroSection() {
             </motion.div>
 
             <motion.div
-              className="flex gap-4 pt-4 justify-center md:justify-start"
+              className="flex gap-4 pt-4  justify-center md:justify-start"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
