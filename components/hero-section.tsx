@@ -37,7 +37,7 @@ export function HeroSection() {
             >
               Hi, I'm Ronald Belonwu{" "}
               <motion.span
-                className="inline-block"
+                className="inline-block "
                 animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
                 transition={{
                   duration: 2,
@@ -143,7 +143,7 @@ export function HeroSection() {
             <motion.div
               className="relative w-80 h-80 md:w-96 md:h-96"
               animate={{
-                y: [0, -20, 0],
+                // y: [0, -20, 0],
               }}
               transition={{
                 duration: 4,
@@ -152,9 +152,9 @@ export function HeroSection() {
               }}
             >
               <div className="absolute inset-0 glass-strong rounded-3xl shadow-2xl overflow-hidden">
-                <Image src="/software-engineer-portrait.png" alt="Ronald Belonwu" fill className="object-cover" priority />
+                <Image src="/potfolioimg.jpeg" alt="Ronald Belonwu" fill className="object-cover" priority />
               </div>
-              {/* Floating decoration */}
+             
               <motion.div
                 className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"
                 animate={{
