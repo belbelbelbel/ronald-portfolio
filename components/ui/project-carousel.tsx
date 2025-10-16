@@ -1,0 +1,136 @@
+"use client"
+
+import React, { useState } from "react"
+import { motion } from "framer-motion"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+interface ProjectCarouselProps {
+  children: React.ReactNode[]
+  className?: string
+  itemsVisible?: number
+}
+
+export function ProjectCarousel({ children, className = "", itemsVisible = 3 }: ProjectCarouselProps) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const totalItems = children.length
+  const showNavigation = totalItems > itemsVisible
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems)
+  }
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems)
+  }
+
+  const goToItem = (index: number) => {
+    setCurrentIndex(index)
+  }
+
+  // Get the currently visible items
+  const getVisibleItems = () => {
+    if (!showNavigation) {
+      // Show all items if no navigation needed
+      return children
+    }
+    
+    const items = []
+    for (let i = 0; i < itemsVisible; i++) {
+      const index = (currentIndex + i) % totalItems
+      items.push(children[index])
+    }
+    return items
+  }
+
+  const visibleItems = getVisibleItems()
+
+  return (
+    <div className={`relative ${className}`}>
+      {/* Navigation Arrows - Only show if more than itemsVisible items */}
+      {showNavigation && (
+        <>
+          <div className="absolute top-1/2 -translate-y-1/2 -left-20 z-10">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={goToPrevious}
+              className="h-12 w-12 rounded-full bg-background/80 backdrop-blur-sm border shadow-lg hover:bg-background/90 transition-all duration-200"
+            >
+              <ChevronLeft className="h-8 w-8" />
+            </Button>
+          </div>
+          
+          <div className="absolute top-1/2 -translate-y-1/2 -right-20 z-10">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={goToNext}
+              className="h-12 w-12 rounded-full bg-background/80 backdrop-blur-sm border shadow-lg hover:bg-background/90 transition-all duration-200"
+            >
+              <ChevronRight className="h-8 w-8" />
+            </Button>
+          </div>
+        </>
+      )}
+
+      {/* Project Display */}
+      <div className="relative overflow-hidden">
+        <motion.div
+          key={currentIndex}
+          initial={false}
+          animate={{ x: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 300,
+            damping: 40,
+          }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center px-4"
+        >
+          {visibleItems.map((child, index) => (
+            <motion.div
+              key={showNavigation ? `${currentIndex}-${index}` : index}
+              initial={false}
+              animate={{ x: 0}}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+              className="w-full max-w-sm"
+            >
+              {child}
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Dot Indicators - Only show if navigation is shown */}
+      {showNavigation && (
+        <div className="flex justify-center space-x-2 mt-8">
+          {Array.from({ length: totalItems }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToItem(index)}
+              className={`h-3 w-3 rounded-full transition-all duration-200 ${
+                index >= currentIndex && index < currentIndex + itemsVisible
+                  ? "bg-primary scale-110"
+                  : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+              }`}
+              aria-label={`Go to item ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
+
+
+      {/* {showNavigation && (
+        <div className="absolute top-4 right-4 z-10">
+          <div className="px-3 py-1 rounded-full bg-background/80 backdrop-blur-sm border text-sm font-medium">
+            {Math.min(currentIndex + 1, totalItems)}-{Math.min(currentIndex + itemsVisible, totalItems)} / {totalItems}
+          </div>
+        </div>
+      )} */}
+    </div>
+  )
+}

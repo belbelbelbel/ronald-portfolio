@@ -111,6 +111,34 @@ export const webProjects: WebProject[] = [
       },
     ],
   },
+    {
+    type: "web",
+    title: "NOVABOARD",
+    description:
+      "NOVABOARD is a concept dashboard showcasing real-time analytics, data integration, and secure cloud storage,  designed to demonstrate clean UI and powerful data visualization.",
+    image: "/novaimg2.png",
+    tech: ["Next.js", "Tailwind.css", "Chart.js"],
+    liveUrl: "https://novaboard-nine.vercel.app/",
+    githubUrl: "https://github.com/belbelbelbel/novaboard",
+    screens: [
+      {
+        url: "/novaimg1.png",
+        caption: "Dashboard Overview",
+      },
+      {
+        url: "/novaimg2.png",
+        caption: "Transactions",
+      },
+      {
+        url: "/novaimg3.png",
+        caption: "Budget Categories",
+      },
+      {
+        url: "/novaimg4.png",
+        caption: "Reports & Analytics",
+      },
+    ],
+  },
 ]
 
 export const mobileApps: MobileApp[] = [
@@ -119,7 +147,7 @@ export const mobileApps: MobileApp[] = [
     type: "mobile",
     title: "SHOPNEST",
     description:
-      "A modern mobile e-commerce app that delivers a seamless shopping experience with secure payments, personalized recommendations, and smooth seller–buyer interactions.",
+      "A modern mobile e-commerce app that delivers a seamless shopping experience with secure payments, and seller–buyer interactions.",
     // image: "/social-media-mobile-app.jpg",
     image: "/shopimg.png",
     tech: ["React Native", "Firebase Auth", "Expo"],
@@ -131,7 +159,7 @@ export const mobileApps: MobileApp[] = [
   },
    {
     type: "mobile",
-    title: "WalletWise",
+    title: "WALLETWISE",
     description:
       "A smart expense tracker and collaborative savings app that empowers users to manage spending, set financial goals, and save together combining simplicity, and automation",
     image: "/social-media-mobile-app.jpg",
@@ -155,4 +183,5 @@ export const mobileApps: MobileApp[] = [
       url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     },
   },
+  
 ]

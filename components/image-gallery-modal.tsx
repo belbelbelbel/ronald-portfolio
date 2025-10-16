@@ -86,7 +86,7 @@ export function ImageGalleryModal({ isOpen, onClose, images, projectTitle }: Ima
               <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center text-balance">{projectTitle}</h3>
 
               {/* Image container */}
-              <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-muted mb-4">
+              <div className="relative  aspect-video w-full rounded-xl overflow-hidden bg-muted mb-4">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentIndex}
@@ -94,7 +94,7 @@ export function ImageGalleryModal({ isOpen, onClose, images, projectTitle }: Ima
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.3 }}
-                    className="relative w-full h-full"
+                    className="relative w-full  h-full"
                   >
                     <Image
                       src={images[currentIndex].url || "/placeholder.svg"}
@@ -111,7 +111,7 @@ export function ImageGalleryModal({ isOpen, onClose, images, projectTitle }: Ima
                   variant="ghost"
                   size="icon"
                   onClick={handlePrevious}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full glass hover:bg-primary/20"
+                  className="absolute left-20 cursor-pointer top-1/2 -translate-y-1/2 rounded-full glass hover:bg-primary/20"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </Button>
@@ -119,7 +119,7 @@ export function ImageGalleryModal({ isOpen, onClose, images, projectTitle }: Ima
                   variant="ghost"
                   size="icon"
                   onClick={handleNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full glass hover:bg-primary/20"
+                  className="absolute right-20 top-1/2 cursor-pointer -translate-y-1/2 rounded-full glass hover:bg-primary/20"
                 >
                   <ChevronRight className="w-6 h-6" />
                 </Button>
