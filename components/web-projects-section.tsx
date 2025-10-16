@@ -17,24 +17,25 @@ export function WebProjectsSection() {
 
   const ProjectCard = ({ project }: { project: typeof webProjects[0] }) => (
     <motion.div
-      initial={{ opacity: 1, x: 0 }}
-      animate={isInView ? { opacity: 1, x: 0, transition: { duration: 0.5 } } : {}}
-      whileHover={{ y: -5, rotateY: 0 }}
-      className="glass-strong rounded-2xl overflow-hidden shadow hover:shadow transition-all w-full"
-      style={{ transformStyle: "preserve-3d" }}
+         className="relative shadow h-160 px-1 pt-6 mb-6"
+        whileHover={{ scale: 1.01, rotateY: 5 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        style={{ transformStyle: "preserve-3d" }}
     >
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64  overflow-hidden">
         <Image
           src={project.image || "/placeholder.svg"}
           alt={project.title}
           fill
           priority={true}
-          className="object-contain transition-transform duration-300 hover:scale-105"
+          className="object-cover transition-transform duration-300 hover:scale-101"
         />
       </div>
       <div className="p-6 space-y-4">
         <h3 className="text-2xl font-bold text-foreground text-center">{project.title}</h3>
-        <p className="text-muted-foreground leading-relaxed text-center">{project.description}</p>
+        <div className="h-32 flex items-start justify-center">
+         <p className="text-muted-foreground leading-relaxed text-sm text-center">{project.description}</p>
+       </div>
         <div className="flex flex-wrap gap-2 justify-center">
           {project.tech.map((tech) => (
             <span
@@ -59,7 +60,7 @@ export function WebProjectsSection() {
             <Button
               size="sm"
               variant="outline"
-              className="gap-2 flex-1 glass bg-transparent"
+              className="gap-2 flex-1 cursor-pointer glass bg-transparent relative z-10"
               onClick={() => window.open(project.liveUrl, "_blank")}
             >
               <ExternalLink className="w-4 h-4" />
@@ -68,7 +69,7 @@ export function WebProjectsSection() {
             <Button
               size="sm"
               variant="outline"
-              className="gap-2 flex-1 glass bg-transparent"
+              className="gap-2 flex-1 cursor-pointer glass bg-transparent relative z-10"
               onClick={() => window.open(project.githubUrl, "_blank")}
             >
               <Github className="w-4 h-4" />

@@ -28,7 +28,7 @@ export interface MobileApp {
 export const webProjects: WebProject[] = [
   {
     type: "web",
-    title: "Gote-Marketplace",
+    title: "GOTE-MARKETPLACE",
     description:
       "An e-commerce platform showcasing products with a seamless shopping experience, secure payment integration, and opportunities for sellers to easily sign up and grow their business.",
     image: "/goteimg3.png",
@@ -56,7 +56,7 @@ export const webProjects: WebProject[] = [
   },
   {
     type: "web",
-    title: "LeaveWise-App",
+    title: "LEAVEWISE-APP",
     description:
       "A lightweight leave management tool designed for growing teams: quick setup, clear approval flows, notification and simple reporting so  managers spend less time on admin and more on building",
     image: "/leaveimg2.png",
@@ -82,7 +82,33 @@ export const webProjects: WebProject[] = [
       },
     ],
   },
-  
+      {
+      type: "web",
+      title: "FLAVORIT",
+      description: "FLAVORIT is a modern food discovery and meal planning platform that helps users explore delicious recipes, organize their weekly meals, and stay consistent with healthy eating goals.",
+    image: "/flavoimg.png",
+      tech: ["Next.js", "Tailwind.css", "Chart.js"],
+      liveUrl: "https://food-recipe-app-nine-inky.vercel.app/recipes/r7/",
+      githubUrl: "https://github.com/belbelbelbel/novaboard",
+      screens: [
+        {
+          url: "/flavoimg.png",
+          caption: "Home Page Overview",
+        },
+        {
+          url: "/flavoimg2.png",
+          caption: "Recipe description page",
+        },
+        {
+          url: "/flavoimg4.png",
+          caption: "Meal Plan Page",
+        },
+        {
+          url: "/flavoimg5.png",
+          caption: "Recipe detail page",
+        },
+      ],
+    },
   {
     type: "web",
     title: "NOVABOARD",
@@ -111,34 +137,7 @@ export const webProjects: WebProject[] = [
       },
     ],
   },
-    {
-    type: "web",
-    title: "NOVABOARD",
-    description:
-      "NOVABOARD is a concept dashboard showcasing real-time analytics, data integration, and secure cloud storage,  designed to demonstrate clean UI and powerful data visualization.",
-    image: "/novaimg2.png",
-    tech: ["Next.js", "Tailwind.css", "Chart.js"],
-    liveUrl: "https://novaboard-nine.vercel.app/",
-    githubUrl: "https://github.com/belbelbelbel/novaboard",
-    screens: [
-      {
-        url: "/novaimg1.png",
-        caption: "Dashboard Overview",
-      },
-      {
-        url: "/novaimg2.png",
-        caption: "Transactions",
-      },
-      {
-        url: "/novaimg3.png",
-        caption: "Budget Categories",
-      },
-      {
-        url: "/novaimg4.png",
-        caption: "Reports & Analytics",
-      },
-    ],
-  },
+
 ]
 
 export const mobileApps: MobileApp[] = [
@@ -178,6 +177,19 @@ export const mobileApps: MobileApp[] = [
     image: "/newsimg.png",
     tech: ["React Native", "Node.js", "Stripe"],
     githubUrl: "https://github.com/ronaldbelonwu/quickwash",
+    demoVideo: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    },
+  },
+    {
+    type: "mobile",
+    title: "WALLETWISE",
+    description:
+      "A smart expense tracker and collaborative savings app that empowers users to manage spending, set financial goals, and save together combining simplicity, and automation",
+    image: "/social-media-mobile-app.jpg",
+    tech: ["React Native", "Firebase", "Expo"],
+    githubUrl: "https://github.com/ronaldbelonwu/expense-tracker",
     demoVideo: {
       type: "youtube",
       url: "https://www.youtube.com/embed/dQw4w9WgXcQ",

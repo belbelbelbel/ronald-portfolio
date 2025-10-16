@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -13,18 +13,29 @@ interface ProjectCarouselProps {
 
 export function ProjectCarousel({ children, className = "", itemsVisible = 3 }: ProjectCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [hasNavigated, setHasNavigated] = useState(false)
   const totalItems = children.length
   const showNavigation = totalItems > itemsVisible
 
+  useEffect(() => {
+    // Reset hasNavigated when currentIndex changes (except on initial load)
+    if (currentIndex !== 0) {
+      setHasNavigated(true)
+    }
+  }, [currentIndex])
+
   const goToPrevious = () => {
+    setHasNavigated(true)
     setCurrentIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems)
   }
 
   const goToNext = () => {
+    setHasNavigated(true)
     setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems)
   }
 
   const goToItem = (index: number) => {
+    setHasNavigated(true)
     setCurrentIndex(index)
   }
 
@@ -73,30 +84,36 @@ export function ProjectCarousel({ children, className = "", itemsVisible = 3 }: 
           </div>
         </>
       )}
-
-      {/* Project Display */}
       <div className="relative overflow-hidden">
         <motion.div
           key={currentIndex}
           initial={false}
           animate={{ x: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 300,
-            damping: 40,
-          }}
+          transition={
+            hasNavigated && showNavigation
+              ? {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 40,
+                }
+              : { duration: 0 }
+          }
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center px-4"
         >
           {visibleItems.map((child, index) => (
             <motion.div
               key={showNavigation ? `${currentIndex}-${index}` : index}
-              initial={false}
+              initial={hasNavigated && showNavigation ? { x: index === 0 ? 100  : (index === 0 ? -50 : 0), transition:{ duration: 1 } } : false}
               animate={{ x: 0}}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 30,
-              }}
+              transition={
+                hasNavigated && showNavigation
+                  ? {
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 30,
+                    }
+                  : { duration: 0 }
+              }
               className="w-full max-w-sm"
             >
               {child}
@@ -105,7 +122,6 @@ export function ProjectCarousel({ children, className = "", itemsVisible = 3 }: 
         </motion.div>
       </div>
 
-      {/* Dot Indicators - Only show if navigation is shown */}
       {showNavigation && (
         <div className="flex justify-center space-x-2 mt-8">
           {Array.from({ length: totalItems }).map((_, index) => (
