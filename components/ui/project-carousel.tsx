@@ -61,25 +61,25 @@ export function ProjectCarousel({ children, className = "", itemsVisible = 3 }: 
       {/* Navigation Arrows - Only show if more than itemsVisible items */}
       {showNavigation && (
         <>
-          <div className="absolute top-1/2 -translate-y-1/2 -left-20 z-10">
+          <div className="absolute top-1/2 -translate-y-1/2 left-2 sm:-left-12 lg:-left-20 z-10">
             <Button
               variant="ghost"
               size="icon"
               onClick={goToPrevious}
-              className="h-12 w-12 rounded-full bg-background/80 backdrop-blur-sm border shadow-lg hover:bg-background/90 transition-all duration-200"
+              className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 rounded-full bg-background/80 backdrop-blur-sm border shadow-lg hover:bg-background/90 transition-all duration-200"
             >
-              <ChevronLeft className="h-8 w-8" />
+              <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6 lg:h-8 lg:w-8" />
             </Button>
           </div>
           
-          <div className="absolute top-1/2 -translate-y-1/2 -right-20 z-10">
+          <div className="absolute top-1/2 -translate-y-1/2 right-2 sm:-right-12 lg:-right-20 z-10">
             <Button
               variant="ghost"
               size="icon"
               onClick={goToNext}
-              className="h-12 w-12 rounded-full bg-background/80 backdrop-blur-sm border shadow-lg hover:bg-background/90 transition-all duration-200"
+              className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 rounded-full bg-background/80 backdrop-blur-sm border shadow-lg hover:bg-background/90 transition-all duration-200"
             >
-              <ChevronRight className="h-8 w-8" />
+              <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6 lg:h-8 lg:w-8" />
             </Button>
           </div>
         </>
@@ -98,7 +98,7 @@ export function ProjectCarousel({ children, className = "", itemsVisible = 3 }: 
                 }
               : { duration: 0 }
           }
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center px-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 justify-items-center px-2 sm:px-4"
         >
           {visibleItems.map((child, index) => (
             <motion.div

@@ -18,9 +18,9 @@ export function HeroSection() {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 px-4 sm:px-6">
       <div className="container max-w-4xl xl:max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Text content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -29,7 +29,7 @@ export function HeroSection() {
             className="space-y-6 text-center md:text-left"
           >
             <motion.h1
-              className="text-5xl md:text-6xl  font-bold text-balance"
+              className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -49,7 +49,7 @@ export function HeroSection() {
             </motion.h1>
 
             <motion.h2
-              className="text-2xl md:text-3xl font-semibold text-primary"
+              className="text-xl sm:text-2xl md:text-3xl font-semibold text-primary"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -58,7 +58,7 @@ export function HeroSection() {
             </motion.h2>
 
             <motion.p
-              className="text-lg text-muted-foreground leading-relaxed"
+              className="text-base sm:text-lg text-muted-foreground leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -67,7 +67,7 @@ export function HeroSection() {
             </motion.p>
 
             <motion.div
-              className="flex flex-wrap gap-4 justify-center md:justify-start"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center md:justify-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
@@ -75,7 +75,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 onClick={scrollToProjects}
-                className="gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                className="gap-2 shadow-lg hover:shadow-xl transition-shadow w-full sm:w-auto"
               >
                 <Rocket className="w-4 h-4" />
                 View My Work
@@ -84,7 +84,7 @@ export function HeroSection() {
                 size="lg"
                 variant="outline"
                 onClick={handleDownloadCV}
-                className="gap-2 glass hover:glass-strong transition-all bg-transparent"
+                className="gap-2 glass hover:glass-strong transition-all bg-transparent w-full sm:w-auto"
               >
                 <Download className="w-4 h-4" />
                 Download CV
@@ -140,7 +140,7 @@ export function HeroSection() {
             className="flex justify-center"
           >
             <motion.div
-              className="relative w-80 h-80 md:w-96 md:h-96"
+              className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96"
               animate={{
                 // y: [0, -20, 0],
               }}

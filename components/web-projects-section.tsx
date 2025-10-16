@@ -17,12 +17,12 @@ export function WebProjectsSection() {
 
   const ProjectCard = ({ project }: { project: typeof webProjects[0] }) => (
     <motion.div
-         className="relative shadow h-160 px-1 pt-6 mb-6"
+         className="relative shadow h-auto px-2 sm:px-1 pt-4 sm:pt-6 mb-4 sm:mb-6"
         whileHover={{ scale: 1.01, rotateY: 5 }}
         transition={{ type: "spring", stiffness: 300 }}
         style={{ transformStyle: "preserve-3d" }}
     >
-      <div className="relative h-64  overflow-hidden">
+      <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden rounded-lg">
         <Image
           src={project.image || "/placeholder.svg"}
           alt={project.title}
@@ -31,16 +31,16 @@ export function WebProjectsSection() {
           className="object-cover transition-transform duration-300 hover:scale-101"
         />
       </div>
-      <div className="p-6 space-y-4">
-        <h3 className="text-2xl font-bold text-foreground text-center">{project.title}</h3>
-        <div className="h-32 flex items-start justify-center">
-         <p className="text-muted-foreground leading-relaxed text-sm text-center">{project.description}</p>
+      <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
+        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground text-center">{project.title}</h3>
+        <div className="min-h-[80px] sm:min-h-[100px] lg:min-h-[120px] flex items-start justify-center">
+         <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm text-center line-clamp-4">{project.description}</p>
        </div>
-        <div className="flex flex-wrap gap-2 justify-center">
+        <div className="flex flex-wrap gap-1 sm:gap-2 justify-center">
           {project.tech.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full"
+              className="px-2 sm:px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full"
             >
               {tech}
             </span>
@@ -49,30 +49,30 @@ export function WebProjectsSection() {
         <div className="flex flex-col gap-2 pt-2">
           <Button
             size="sm"
-            className="gap-2 w-full"
+            className="gap-2 w-full text-xs sm:text-sm"
             variant="default"
             onClick={() => setSelectedProject(project)}
           >
-            <Images className="w-4 h-4" />
+            <Images className="w-3 h-3 sm:w-4 sm:h-4" />
             View Screens
           </Button>
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <Button
               size="sm"
               variant="outline"
-              className="gap-2 flex-1 cursor-pointer glass bg-transparent relative z-10"
+              className="gap-2 flex-1 cursor-pointer glass bg-transparent relative z-10 text-xs sm:text-sm"
               onClick={() => window.open(project.liveUrl, "_blank")}
             >
-              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
               Live Site
             </Button>
             <Button
               size="sm"
               variant="outline"
-              className="gap-2 flex-1 cursor-pointer glass bg-transparent relative z-10"
+              className="gap-2 flex-1 cursor-pointer glass bg-transparent relative z-10 text-xs sm:text-sm"
               onClick={() => window.open(project.githubUrl, "_blank")}
             >
-              <Github className="w-4 h-4" />
+              <Github className="w-3 h-3 sm:w-4 sm:h-4" />
               GitHub
             </Button>
           </div>
@@ -83,17 +83,17 @@ export function WebProjectsSection() {
 
   return (
     <>
-      <section id="projects" className="py-24 px-6" ref={ref}>
+      <section id="projects" className="py-12 sm:py-20 lg:py-24 px-4 sm:px-6" ref={ref}>
         <div className="container mx-auto max-w-6xl">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-16 text-center text-balance"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 lg:mb-16 text-center text-balance"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
           >
             Web Projects
           </motion.h2>
 
-          <ProjectCarousel className="min-h-[600px]" itemsVisible={3}>
+          <ProjectCarousel className="min-h-[500px] sm:min-h-[550px] lg:min-h-[600px]" itemsVisible={3}>
             {webProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
