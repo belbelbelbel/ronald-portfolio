@@ -61,7 +61,7 @@ export const webProjects: WebProject[] = [
       "A lightweight leave management tool designed for growing teams: quick setup, clear approval flows, notification and simple reporting so  managers spend less time on admin and more on building",
     image: "/leaveimg2.png",
     tech: ["Pure Javascript", "Tailwind",'Express'],
-    liveUrl: "https://leave-mangment-system.vercel.app//",
+    liveUrl: "https://leave-mangment-system.vercel.app/",
     githubUrl: "https://github.com/belbelbelbel/leave-mangment-system",
     screens: [
       {

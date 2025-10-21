@@ -16,12 +16,7 @@ export function WebProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<(typeof webProjects)[0] | null>(null)
 
   const ProjectCard = ({ project }: { project: typeof webProjects[0] }) => (
-    <motion.div
-         className="relative shadow h-auto px-2 sm:px-1 pt-4 sm:pt-6 mb-4 sm:mb-6"
-        whileHover={{ scale: 1.01, rotateY: 5 }}
-        transition={{ type: "spring", stiffness: 300 }}
-        style={{ transformStyle: "preserve-3d" }}
-    >
+    <div className="relative shadow h-auto px-2 sm:px-1 pt-4 sm:pt-6 mb-4 sm:mb-6 hover:scale-[1.01] transition-transform duration-300">
       <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden rounded-lg">
         <Image
           src={project.image || "/placeholder.svg"}
@@ -49,36 +44,40 @@ export function WebProjectsSection() {
         <div className="flex flex-col gap-2 pt-2">
           <Button
             size="sm"
-            className="gap-2 w-full text-xs sm:text-sm"
+            className="gap-2 w-full text-xs sm:text-sm relative z-20"
             variant="default"
-            onClick={() => setSelectedProject(project)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedProject(project);
+            }}
+            style={{ pointerEvents: "auto" }}
           >
             <Images className="w-3 h-3 sm:w-4 sm:h-4" />
             View Screens
           </Button>
           <div className="flex flex-col sm:flex-row gap-2">
-            <Button
-              size="sm"
-              variant="outline"
-              className="gap-2 flex-1 cursor-pointer glass bg-transparent relative z-10 text-xs sm:text-sm"
-              onClick={() => window.open(project.liveUrl, "_blank")}
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 h-9 px-3 text-xs sm:text-sm font-medium transition-colors border border-input bg-transparent hover:bg-accent hover:text-accent-foreground rounded-md cursor-pointer glass relative z-20"
             >
               <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
               Live Site
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              className="gap-2 flex-1 cursor-pointer glass bg-transparent relative z-10 text-xs sm:text-sm"
-              onClick={() => window.open(project.githubUrl, "_blank")}
+            </a>
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 h-9 px-3 text-xs sm:text-sm font-medium transition-colors border border-input bg-transparent hover:bg-accent hover:text-accent-foreground rounded-md cursor-pointer glass relative z-20"
             >
               <Github className="w-3 h-3 sm:w-4 sm:h-4" />
               GitHub
-            </Button>
+            </a>
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 
   return (
