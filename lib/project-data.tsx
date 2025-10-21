@@ -88,7 +88,7 @@ export const webProjects: WebProject[] = [
       description: "FLAVORIT is a modern food discovery and meal planning platform that helps users explore delicious recipes, organize their weekly meals, and stay consistent with healthy eating goals.",
     image: "/flavoimg.png",
       tech: ["Next.js", "Tailwind.css", "Chart.js"],
-      liveUrl: "https://food-recipe-app-nine-inky.vercel.app/recipes/r7/",
+      liveUrl: "https://food-recipe-app-nine-inky.vercel.app/",
       githubUrl: "https://github.com/belbelbelbel/novaboard",
       screens: [
         {
