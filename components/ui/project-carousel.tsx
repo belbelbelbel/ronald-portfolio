@@ -98,7 +98,7 @@ export function ProjectCarousel({ children, className = "", itemsVisible = 3 }: 
                 }
               : { duration: 0 }
           }
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 justify-items-center px-2 sm:px-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 justify-items-center px-2 sm:px-4 items-stretch"
         >
           {visibleItems.map((child, index) => (
             <motion.div
@@ -114,7 +114,7 @@ export function ProjectCarousel({ children, className = "", itemsVisible = 3 }: 
                     }
                   : { duration: 0 }
               }
-              className="w-full max-w-sm"
+              className="w-full max-w-sm h-full flex"
             >
               {child}
             </motion.div>

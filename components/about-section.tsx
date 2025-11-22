@@ -35,10 +35,11 @@ export function AboutSection() {
               My journey into software development started with a simple curiosity, I wanted to understand how the apps I loved actually worked. That curiosity quickly grew into a passion for creating mobile and web experiences that feels useful, and genuinely enjoyable to use.
             </p>
             <p>
-              Over time, I’ve focused on frontend and mobile development, working mainly with React, Next and React Native to build interfaces that are fast, intuitive, and visually polished.
+              I enjoy bringing ideas to life, from designing smooth, user-friendly interfaces to building scalable solutions that perform in the real world. With practical experience in Firebase and solid knowledge of Node.js, I'm able to connect the frontend and backend to deliver complete, well-structured applications.
             </p>
             <p>
-              I enjoy bringing ideas to life, from designing smooth, user-friendly interfaces to building scalable solutions that perform in the real world. With practical experience in Firebase and mid knowledge of Node.js, I’m able to connect the frontend and backend to deliver complete, well-structured applications.
+              My goal is simple:
+              Build products that feel smooth, look modern, and solve real problems.
             </p>
           </motion.div>
         </motion.div>

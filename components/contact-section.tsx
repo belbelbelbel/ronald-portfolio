@@ -9,6 +9,7 @@ import { Github, Linkedin, Mail, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { toast } from "sonner"
 
 export function ContactSection() {
   const ref = useRef(null)
@@ -28,7 +29,10 @@ export function ContactSection() {
     console.log("Form submitted:", formData)
     setIsSubmitting(false)
     setFormData({ name: "", email: "", message: "" })
-    alert("Thank you for your message! I will get back to you soon.")
+    toast.success("Message sent!", {
+      description: "Thank you for your message! I will get back to you soon.",
+      duration: 5000,
+    })
   }
 
   return (
@@ -173,7 +177,7 @@ export function ContactSection() {
                   transition={{ delay: 0.6 }}
                 >
                   <p className="text-sm text-muted-foreground">
-                    © 2024 Ronald Belonwu
+                    ©Ronald Belonwu
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
                     Fullstack & Mobile Engineer

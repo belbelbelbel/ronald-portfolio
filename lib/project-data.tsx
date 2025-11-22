@@ -30,7 +30,7 @@ export const webProjects: WebProject[] = [
     type: "web",
     title: "GOTE-MARKETPLACE",
     description:
-      "An e-commerce platform showcasing products with a seamless shopping experience, secure payment integration, and opportunities for sellers to easily sign up and grow their business.",
+      "A modern e-commerce/marketplace platform with product listings, responsive layouts, and a clean shopping experience.",
     image: "/goteimg3.png",
     tech: ["Next.js", "Firebase", "Tailwind"],
     liveUrl: "https://gote-marketplace.vercel.app/",
@@ -58,7 +58,7 @@ export const webProjects: WebProject[] = [
     type: "web",
     title: "LEAVEWISE-APP",
     description:
-      "A lightweight leave management tool designed for growing teams: quick setup, clear approval flows, notification and simple reporting so  managers spend less time on admin and more on building",
+      "Role-based workflow system allowing staff to request leave and admins to approve or decline",
     image: "/leaveimg2.png",
     tech: ["Pure Javascript", "Tailwind",'Express'],
     liveUrl: "https://leave-mangment-system.vercel.app/",
@@ -85,7 +85,7 @@ export const webProjects: WebProject[] = [
       {
       type: "web",
       title: "FLAVORIT",
-      description: "FLAVORIT is a modern food discovery and meal planning platform that helps users explore delicious recipes, organize their weekly meals, and stay consistent with healthy eating goals.",
+      description: "A food discovery and meal planning platform for exploring recipes and organizing weekly meals.",
     image: "/flavoimg.png",
       tech: ["Next.js", "Tailwind.css", "Chart.js"],
       liveUrl: "https://food-recipe-app-nine-inky.vercel.app/",
@@ -109,36 +109,37 @@ export const webProjects: WebProject[] = [
         },
       ],
     },
-  {
-    type: "web",
-    title: "NOVABOARD",
-    description:
-      "NOVABOARD is a concept dashboard showcasing real-time analytics, data integration, and secure cloud storage,  designed to demonstrate clean UI and powerful data visualization.",
-    image: "/novaimg2.png",
-    tech: ["Next.js", "Tailwind.css", "Chart.js"],
-    liveUrl: "https://novaboard-nine.vercel.app/",
-    githubUrl: "https://github.com/belbelbelbel/novaboard",
-    screens: [
-      {
-        url: "/novaimg1.png",
-        caption: "Dashboard Overview",
-      },
-      {
-        url: "/novaimg2.png",
-        caption: "Transactions",
-      },
-      {
-        url: "/novaimg3.png",
-        caption: "Budget Categories",
-      },
-      {
-        url: "/novaimg4.png",
-        caption: "Reports & Analytics",
-      },
-    ],
-  },
+
 
 ]
+  // {
+  //   type: "web",
+  //   title: "NOVABOARD",
+  //   description:
+  //     "NOVABOARD is a concept dashboard showcasing real-time analytics, data integration, and secure cloud storage,  designed to demonstrate clean UI and powerful data visualization.",
+  //   image: "/novaimg2.png",
+  //   tech: ["Next.js", "Tailwind.css", "Chart.js"],
+  //   liveUrl: "https://novaboard-nine.vercel.app/",
+  //   githubUrl: "https://github.com/belbelbelbel/novaboard",
+  //   screens: [
+  //     {
+  //       url: "/novaimg1.png",
+  //       caption: "Dashboard Overview",
+  //     },
+  //     {
+  //       url: "/novaimg2.png",
+  //       caption: "Transactions",
+  //     },
+  //     {
+  //       url: "/novaimg3.png",
+  //       caption: "Budget Categories",
+  //     },
+  //     {
+  //       url: "/novaimg4.png",
+  //       caption: "Reports & Analytics",
+  //     },
+  //   ],
+  // },
 
 export const mobileApps: MobileApp[] = [
  
@@ -146,7 +147,7 @@ export const mobileApps: MobileApp[] = [
     type: "mobile",
     title: "SHOPNEST",
     description:
-      "A modern mobile e-commerce app that delivers a seamless shopping experience with secure payments, and seller–buyer interactions.",
+      "A full shopping flow built in React Native with clean mobile UI and cart management.",
     // image: "/social-media-mobile-app.jpg",
     image: "/shopimg.png",
     tech: ["React Native", "Firebase Auth", "Expo"],
@@ -156,24 +157,11 @@ export const mobileApps: MobileApp[] = [
       url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     },
   },
-   {
-    type: "mobile",
-    title: "WALLETWISE",
-    description:
-      "A smart expense tracker and collaborative savings app that empowers users to manage spending, set financial goals, and save together combining simplicity, and automation",
-    image: "/social-media-mobile-app.jpg",
-    tech: ["React Native", "Firebase", "Expo"],
-    githubUrl: "https://github.com/ronaldbelonwu/expense-tracker",
-    demoVideo: {
-      type: "youtube",
-      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-  },
   {
     type: "mobile",
     title: "NEWSBEAT",
     description:
-      "A sleek and engaging news app that brings real-time updates, trending headlines, and personalized feeds keeping users informed with speed and clarity",
+      "A lightweight app that fetches real-time news from an external API with category filtering and search.",
     image: "/newsimg.png",
     tech: ["React Native", "Node.js", "Stripe"],
     githubUrl: "https://github.com/ronaldbelonwu/quickwash",
@@ -186,7 +174,7 @@ export const mobileApps: MobileApp[] = [
     type: "mobile",
     title: "WALLETWISE",
     description:
-      "A smart expense tracker and collaborative savings app that empowers users to manage spending, set financial goals, and save together combining simplicity, and automation",
+      "A financial tracking tool that helps users understand where their money goes using analytics and clean UI.",
     image: "/social-media-mobile-app.jpg",
     tech: ["React Native", "Firebase", "Expo"],
     githubUrl: "https://github.com/ronaldbelonwu/expense-tracker",
