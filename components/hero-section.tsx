@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, Download, Rocket } from "lucide-react"
+import { Github, Linkedin, Mail, Download, Rocket, Code } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
@@ -26,27 +26,18 @@ export function HeroSection() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6 text-center md:text-left"
+            className="space-y-4 text-center md:text-left"
           >
-            <motion.h1
-              className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              Hi, I'm Ronald Belonwu{" "}
-              <motion.span
-                className="inline-block "
-                animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Number.POSITIVE_INFINITY,
-                  repeatDelay: 1,
-                }}
+            <div className="space-y-3">
+              <motion.h1
+                className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
               >
-                👋
-              </motion.span>
-            </motion.h1>
+                Hi, I'm Ronald Belonwu
+              </motion.h1>
+            </div>
 
             <motion.h2
               className="text-xl sm:text-2xl md:text-3xl font-semibold text-primary"
@@ -92,7 +83,7 @@ export function HeroSection() {
             </motion.div>
 
             <motion.div
-              className="flex gap-4 pt-4  justify-center md:justify-start"
+              className="flex gap-4 pt-4 justify-center md:justify-start"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
@@ -139,17 +130,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex justify-center"
           >
-            <motion.div
-              className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96"
-              animate={{
-                // y: [0, -20, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
-            >
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
               <div className="absolute inset-0 glass-strong rounded-3xl shadow-2xl overflow-hidden">
                 <Image src="/potfolioimg.jpeg" alt="Ronald Belonwu" fill className="object-cover" priority />
               </div>
@@ -179,7 +160,7 @@ export function HeroSection() {
                   delay: 1,
                 }}
               />
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>

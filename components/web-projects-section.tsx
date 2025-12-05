@@ -16,35 +16,42 @@ export function WebProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<(typeof webProjects)[0] | null>(null)
 
   const ProjectCard = ({ project }: { project: typeof webProjects[0] }) => (
-    <div className="relative shadow h-full px-2 sm:px-1 pt-4 sm:pt-6 mb-4 sm:mb-6 hover:scale-[1.01] transition-transform duration-300 flex flex-col glass-strong rounded-2xl overflow-hidden">
-      <div className="relative h-58 sm:h-56 lg:h-72 overflow-hidden rounded-lg flex-shrink-0 mx-2 sm:mx-4">
-        <Image
-          src={project.image || "/placeholder.svg"}
-          alt={project.title}
-          fill
-          priority={true}
-          className="object-cover transition-transform duration-300 hover:scale-101"
-        />
+    <div className="flex flex-col items-center w-full h-full gap-4 sm:gap-5">
+      {/* Image / mockup card */}
+      <div className="relative w-full rounded-2xl p-4 sm:p-5 bg-gradient-to-br from-muted/40 via-background to-muted/10 shadow-xl border border-primary/10">
+        <div className="relative w-full h-40 sm:h-48 lg:h-56 rounded-xl overflow-hidden bg-background">
+          <Image
+            src={project.image || "/placeholder.svg"}
+            alt={project.title}
+            fill
+            priority={true}
+            className="object-cover transition-transform duration-300 hover:scale-[1.03]"
+          />
+        </div>
       </div>
-      <div className="p-3 sm:p-4 space-y-2 sm:space-y-3 flex flex-col flex-grow">
+
+      {/* Details card */}
+      <div className="relative w-full glass-strong rounded-2xl p-4 sm:p-5 shadow space-y-3 sm:space-y-4 flex flex-col flex-grow border border-border/50">
         <h3 className="text-base sm:text-lg lg:text-xl font-bold text-foreground text-center">{project.title}</h3>
-        <div className="flex-grow flex items-start justify-center min-h-[60px] sm:min-h-[70px] lg:min-h-[80px]">
-         <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm text-center line-clamp-4">{project.description}</p>
-       </div>
-        <div className="flex flex-wrap gap-1 sm:gap-2 justify-center flex-shrink-0">
+        <div className="flex-grow flex items-start justify-center min-h-[70px] sm:min-h-[80px] lg:min-h-[90px]">
+          <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm text-center line-clamp-4">
+            {project.description}
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2 justify-center flex-shrink-0 pt-1">
           {project.tech.map((tech) => (
             <span
               key={tech}
-              className="px-2 py-0.5 text-xs font-medium bg-primary/10 text-primary rounded-full"
+              className="px-2.5 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full"
             >
               {tech}
             </span>
           ))}
         </div>
-        <div className="flex flex-col gap-2 pt-1 flex-shrink-0">
+        <div className="flex flex-col gap-3 pt-2 flex-shrink-0">
           <Button
             size="sm"
-            className="gap-2 w-full text-xs relative z-20 h-8"
+            className="gap-2 w-full text-xs sm:text-sm relative z-20 h-9"
             variant="default"
             onClick={(e) => {
               e.stopPropagation();
