@@ -242,7 +242,7 @@ export function Navigation() {
                   transition={{ delay: 0.6 }}
                 >
                   <p className="text-sm text-muted-foreground">
-                    © 2024 Ronald Belonwu
+                    © 2024 Ronald Chiagozie
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
                     Fullstack & Mobile Engineer

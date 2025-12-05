@@ -163,7 +163,7 @@ export const mobileApps: MobileApp[] = [
     description:
       "A lightweight app that fetches real-time news from an external API with category filtering and search.",
     image: "/newsimg.png",
-    tech: ["React Native", "Node.js", "Stripe"],
+    tech: ["React Native", "Expo", "NewsAPI"],
     githubUrl: "https://github.com/ronaldbelonwu/quickwash",
     demoVideo: {
       type: "youtube",

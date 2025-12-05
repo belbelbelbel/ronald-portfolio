@@ -46,7 +46,7 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                Hi, I'm Ronald Belonwu
+                Hi, I'm Ronald Chiagozie
               </motion.h1>
             </div>
 

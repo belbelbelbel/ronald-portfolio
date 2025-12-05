@@ -6,9 +6,9 @@ import { Toaster } from '@/components/ui/sonner'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Ronald Belonwu — Fullstack & Mobile Engineer",
+  title: "Ronald Chiagozie — Fullstack & Mobile Engineer",
   description:
-    "Personal portfolio of Ronald Belonwu — a Fullstack and mobile engineer skilled in React,Next, React Native, Firebase, and Node.js. Explore modern web and mobile projects with smooth UI and appealing architecture.",
+    "Personal portfolio of Ronald Chiagozie — a Fullstack and mobile engineer skilled in React,Next, React Native, Firebase, and Node.js. Explore modern web and mobile projects with smooth UI and appealing architecture.",
 };
 
 export default function RootLayout({

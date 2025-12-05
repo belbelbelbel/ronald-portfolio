@@ -177,7 +177,7 @@ export function ContactSection() {
                   transition={{ delay: 0.6 }}
                 >
                   <p className="text-sm text-muted-foreground">
-                    ©Ronald Belonwu
+                    ©Ronald Chiagozie
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
                     Fullstack & Mobile Engineer
