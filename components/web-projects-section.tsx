@@ -17,18 +17,57 @@ export function WebProjectsSection() {
 
   const ProjectCard = ({ project }: { project: typeof webProjects[0] }) => (
     <div className="flex flex-col items-center w-full h-full gap-4 sm:gap-5">
-      {/* Image / mockup card */}
-      <div className="relative w-full rounded-2xl p-4 sm:p-5 bg-gradient-to-br from-muted/40 via-background to-muted/10 shadow-xl border border-primary/10">
-        <div className="relative w-full h-40 sm:h-48 lg:h-56 rounded-xl overflow-hidden bg-background">
+      {/* Image / mockup card with hover */}
+      <motion.div
+        className="relative w-full rounded-2xl p-4 sm:p-5 bg-gradient-to-br from-muted/40 via-background to-muted/10 shadow-xl border border-primary/10 overflow-hidden"
+        initial="rest"
+        whileHover="hover"
+        animate="rest"
+      >
+        <motion.div
+          className="relative w-full h-40 sm:h-48 lg:h-56 rounded-xl overflow-hidden bg-background"
+          variants={{
+            rest: { scale: 1 },
+            hover: { scale: 1.03 },
+          }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        >
           <Image
             src={project.image || "/placeholder.svg"}
             alt={project.title}
             fill
-            priority={true}
-            className="object-cover transition-transform duration-300 hover:scale-[1.03]"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover"
           />
-        </div>
-      </div>
+          <motion.div
+            className="absolute inset-0 bg-black/55 flex flex-col items-center justify-center gap-3 text-white"
+            variants={{
+              rest: { opacity: 0, y: 10 },
+              hover: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+          >
+            <span className="text-sm font-semibold tracking-wide uppercase">View case study</span>
+            <motion.div
+              className="flex flex-wrap justify-center gap-2 px-4"
+              variants={{
+                rest: { opacity: 0, y: 12 },
+                hover: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.25, ease: "easeOut", delay: 0.05 }}
+            >
+              {project.tech.slice(0, 3).map((tech) => (
+                <span
+                  key={tech}
+                  className="px-2 py-0.5 text-[11px] font-medium rounded-full bg-white/10 border border-white/30"
+                >
+                  {tech}
+                </span>
+              ))}
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
       {/* Details card */}
       <div className="relative w-full glass-strong rounded-2xl p-4 sm:p-5 shadow space-y-3 sm:space-y-4 flex flex-col flex-grow border border-border/50">

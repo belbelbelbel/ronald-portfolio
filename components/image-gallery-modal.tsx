@@ -100,7 +100,7 @@ export function ImageGalleryModal({ isOpen, onClose, images, projectTitle }: Ima
                       src={images[currentIndex].url || "/placeholder.svg"}
                       alt={images[currentIndex].caption}
                       fill
-                      priority={true}
+                      sizes="(max-width: 768px) 100vw, 80vw"
                       className="object-contain"
                     />
                   </motion.div>
@@ -143,7 +143,13 @@ export function ImageGalleryModal({ isOpen, onClose, images, projectTitle }: Ima
                       index === currentIndex ? "ring-2 ring-primary scale-110" : "opacity-50 hover:opacity-100"
                     }`}
                   >
-                    <Image src={image.url || "/placeholder.svg"} alt={image.caption} fill className="object-cover" />
+                    <Image
+                      src={image.url || "/placeholder.svg"}
+                      alt={image.caption}
+                      fill
+                      sizes="80px"
+                      className="object-cover"
+                    />
                   </button>
                 ))}
               </div>

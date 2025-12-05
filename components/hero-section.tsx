@@ -1,11 +1,18 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { useRef } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
 import { Github, Linkedin, Mail, Download, Rocket, Code } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 export function HeroSection() {
+  const sectionRef = useRef<HTMLElement | null>(null)
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  })
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, 40])
   const handleDownloadCV = () => {
     const link = document.createElement("a")
     link.href = "/Ronald-Chiagozie-FlowCV-Resume-20251014.pdf"
@@ -18,7 +25,11 @@ export function HeroSection() {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 px-4 sm:px-6">
+    <section
+      id="home"
+      ref={sectionRef}
+      className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 px-4 sm:px-6"
+    >
       <div className="container max-w-4xl xl:max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Text content */}
@@ -54,7 +65,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              I build modern web and mobile experiences using React.js,Next.js, React Native, and Firebase.
+              I build modern web and mobile apps using React, Next.js, React Native, and Firebase, from clean UIs to production‑ready architecture.
             </motion.p>
 
             <motion.div
@@ -63,23 +74,28 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <Button
-                size="lg"
-                onClick={scrollToProjects}
-                className="gap-2 shadow-lg hover:shadow-xl transition-shadow w-full sm:w-auto"
-              >
-                <Rocket className="w-4 h-4" />
-                View My Work
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={handleDownloadCV}
-                className="gap-2 glass hover:glass-strong transition-all bg-transparent w-full sm:w-auto"
-              >
-                <Download className="w-4 h-4" />
-                Download CV
-              </Button>
+              <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.97 }}>
+                <Button
+                  size="lg"
+                  onClick={scrollToProjects}
+                  className="gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-shadow w-full sm:w-auto"
+                >
+                  {/* <Rocket className="w-4 h-4" /> */}
+                  <Code className="w-4 h-4" />
+                  View My Work
+                </Button>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.03, y: -1 }} whileTap={{ scale: 0.97 }}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={handleDownloadCV}
+                  className="gap-2 glass hover:glass-strong transition-all bg-transparent w-full sm:w-auto"
+                >
+                  <Download className="w-4 h-4" />
+                  Download CV
+                </Button>
+              </motion.div>
             </motion.div>
 
             <motion.div
@@ -130,11 +146,14 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex justify-center"
           >
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
+            <motion.div
+              style={{ y: imageY }}
+              className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96"
+            >
               <div className="absolute inset-0 glass-strong rounded-3xl shadow-2xl overflow-hidden">
                 <Image src="/potfolioimg.jpeg" alt="Ronald Belonwu" fill className="object-cover" priority />
               </div>
-             
+
               <motion.div
                 className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"
                 animate={{
@@ -160,7 +179,7 @@ export function HeroSection() {
                   delay: 1,
                 }}
               />
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
