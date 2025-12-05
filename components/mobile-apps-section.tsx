@@ -51,13 +51,13 @@ export function MobileAppsSection() {
             </span>
           ))}
         </div>
-        <div className="flex flex-col gap-3 pt-2 flex-shrink-0">
-          <Button className="w-full gap-2 text-xs sm:text-sm h-9 relative z-10" onClick={() => setSelectedApp(app)}>
+        <div className="flex flex-row gap-3 pt-2 flex-shrink-0">
+          <Button className="w-1/2 gap-2 text-xs sm:text-sm h-9 relative z-10" onClick={() => setSelectedApp(app)}>
             <Play className="w-3 h-3" />
             Watch Demo
           </Button>
           <Button
-            className="w-full gap-2 bg-foreground text-background hover:bg-foreground/90 hover:text-background cursor-pointer text-xs sm:text-sm h-9 relative z-10"
+            className="w-1/2 gap-2 bg-foreground text-background hover:bg-foreground/90 hover:text-background cursor-pointer text-xs sm:text-sm h-9 relative z-10"
             variant="outline"
             onClick={() => window.open(app.githubUrl, "_blank")}
           >
