@@ -70,8 +70,11 @@ export function ImageGalleryModal({ isOpen, onClose, images, projectTitle }: Ima
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${projectTitle} screenshots`}
           >
-            <div className="relative w-full max-w-6xl glass-strong rounded-2xl p-6 md:p-8 shadow-2xl">
+            <div className="relative w-full max-w-6xl glass-strong rounded-2xl p-6 md:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
               {/* Close button */}
               <Button
                 variant="ghost"

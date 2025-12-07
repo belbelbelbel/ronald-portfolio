@@ -134,6 +134,7 @@ export function MobileAppsSection() {
         videoUrl={selectedApp?.demoVideo.url || ""}
         videoType={selectedApp?.demoVideo.type || "youtube"}
         projectTitle={selectedApp?.title || ""}
+        audioUrl={selectedApp?.demoVideo.audioUrl}
       />
     </>
   )

@@ -1,7 +1,7 @@
 "use client"
 import { motion, AnimatePresence } from "framer-motion"
 import { X } from "lucide-react"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 
 interface VideoModalProps {
@@ -10,17 +10,29 @@ interface VideoModalProps {
   videoUrl: string
   videoType: "youtube" | "mp4"
   projectTitle: string
+  audioUrl?: string
 }
 
-export function VideoModal({ isOpen, onClose, videoUrl, videoType, projectTitle }: VideoModalProps) {
+export function VideoModal({ isOpen, onClose, videoUrl, videoType, projectTitle, audioUrl }: VideoModalProps) {
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden"
     } else {
       document.body.style.overflow = "unset"
+      // stop audio when modal closes
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current.currentTime = 0
+      }
     }
     return () => {
       document.body.style.overflow = "unset"
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current.currentTime = 0
+      }
     }
   }, [isOpen])
 
@@ -33,6 +45,22 @@ export function VideoModal({ isOpen, onClose, videoUrl, videoType, projectTitle 
       return () => window.removeEventListener("keydown", handleKeyDown)
     }
   }, [isOpen, onClose])
+
+  const handleVideoPlay = () => {
+    if (videoType === "mp4" && audioUrl && audioRef.current) {
+      audioRef.current
+        .play()
+        .catch(() => {
+          // autoplay might be blocked; ignore
+        })
+    }
+  }
+
+  const handleVideoPause = () => {
+    if (audioRef.current) {
+      audioRef.current.pause()
+    }
+  }
 
   return (
     <AnimatePresence>
@@ -53,8 +81,11 @@ export function VideoModal({ isOpen, onClose, videoUrl, videoType, projectTitle 
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${projectTitle} demo video`}
           >
-            <div className="relative w-full max-w-5xl glass-strong rounded-2xl p-6 md:p-8 shadow-2xl">
+            <div className="relative w-full max-w-5xl glass-strong rounded-2xl p-6 md:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
               {/* Close button */}
               <Button
                 variant="ghost"
@@ -84,11 +115,22 @@ export function VideoModal({ isOpen, onClose, videoUrl, videoType, projectTitle 
                     className="w-full h-full"
                   />
                 ) : (
-                  <video src={videoUrl} controls className="w-full h-full">
+                  <video
+                    src={videoUrl}
+                    controls
+                    className="w-full h-full"
+                    onPlay={handleVideoPlay}
+                    onPause={handleVideoPause}
+                    onEnded={handleVideoPause}
+                  >
                     Your browser does not support the video tag.
                   </video>
                 )}
               </motion.div>
+
+              {audioUrl && videoType === "mp4" && (
+                <audio ref={audioRef} src={audioUrl} loop className="hidden" />
+              )}
 
               {/* Description */}
               <p className="text-center text-muted-foreground mt-4">Watch the full demo of {projectTitle}</p>

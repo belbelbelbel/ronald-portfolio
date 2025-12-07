@@ -22,6 +22,7 @@ export interface MobileApp {
   demoVideo: {
     type: "youtube" | "mp4"
     url: string
+    audioUrl?: string
   }
 }
 
@@ -154,7 +155,8 @@ export const mobileApps: MobileApp[] = [
     githubUrl: "https://github.com/ronaldbelonwu/lazio",
     demoVideo: {
       type: "youtube",
-      url: "https://www.youtube.com/embed/4iGxEFOQ27M",
+      // url: "https://www.youtube.com/embed/4iGxEFOQ27M",
+      url: "https://www.youtube.com/embed/AXhijk9fGyc",
     },
   },
   {
