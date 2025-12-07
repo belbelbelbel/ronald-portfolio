@@ -154,7 +154,7 @@ export const mobileApps: MobileApp[] = [
     githubUrl: "https://github.com/ronaldbelonwu/lazio",
     demoVideo: {
       type: "youtube",
-      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      url: "https://www.youtube.com/watch?v=4iGxEFOQ27M",
     },
   },
   {
