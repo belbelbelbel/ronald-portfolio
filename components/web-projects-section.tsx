@@ -17,7 +17,6 @@ export function WebProjectsSection() {
 
   const ProjectCard = ({ project }: { project: typeof webProjects[0] }) => (
     <div className="flex flex-col items-center w-full h-full gap-4 sm:gap-5">
-      {/* Image / mockup card with hover */}
       <motion.div
         className="relative w-full rounded-2xl p-4 sm:p-5 bg-gradient-to-br from-muted/40 via-background to-muted/10 shadow-xl border border-primary/10 overflow-hidden"
         initial="rest"
@@ -47,7 +46,7 @@ export function WebProjectsSection() {
             }}
             transition={{ duration: 0.25, ease: "easeOut" }}
           >
-            <span className="text-sm font-semibold tracking-wide uppercase">View case study</span>
+            <span className="text-sm font-semibold tracking-wide uppercase"> study</span>
             <motion.div
               className="flex flex-wrap justify-center gap-2 px-4"
               variants={{

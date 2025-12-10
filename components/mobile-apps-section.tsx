@@ -20,7 +20,6 @@ export function MobileAppsSection() {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       className="flex flex-col items-center w-full h-full gap-4 sm:gap-5"
     >
-      {/* Image card with hover overlay (like web layout) */}
       <motion.div
         className="relative w-full rounded-2xl p-4 sm:p-5 bg-gradient-to-br from-muted/40 via-background to-muted/10 shadow-xl border border-primary/10 overflow-hidden"
         initial="rest"
