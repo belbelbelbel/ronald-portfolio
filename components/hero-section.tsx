@@ -15,8 +15,8 @@ export function HeroSection() {
   const imageY = useTransform(scrollYProgress, [0, 1], [0, 40])
   const handleDownloadCV = () => {
     const link = document.createElement("a")
-    link.href = "/Ronald-Chiagozie-FlowCV-Resume-20251014.pdf"
-    link.download = "/Ronald-Chiagozie-FlowCV-Resume-20251014.pdf"
+    link.href = "/Ronald-Chiagozie-FlowCV-Resume-20251128 updated 2.pdf"
+    link.download = "/Ronald-Chiagozie-FlowCV-Resume-20251128 updated 2.pdf"
     link.click()
   }
 
@@ -32,7 +32,6 @@ export function HeroSection() {
     >
       <div className="container max-w-4xl xl:max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left side - Text content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -139,7 +138,6 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right side - Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
